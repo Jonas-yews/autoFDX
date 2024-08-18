@@ -71,23 +71,6 @@ def play_sound():
     # 播放提示音
     winsound.PlaySound("SystemAsterisk", winsound.SND_ALIAS)
     
-# def check_input():
-#     global paused, reset_i,i
-#     while True:
-#         if i >= 5:
-#             if keyboard.is_pressed('space'):  # 检测是否按下空格键
-#                 paused = not paused
-#                 if paused:
-#                     print("已暂停，请在3秒内按下空格以重置次数或等待3秒后自动继续。")
-#                     start_time = time()
-#                     while time() - start_time < 3:
-#                         keyboard.wait('space')  # 等待空格键的按下
-#                         reset_i = True
-#                         i = 0
-#                         break
-#                     else:
-#                         print("继续执行")
-#             sleep(0.1)  # 等待一段时间再次检查
 
 def start():
     pos = match('start')
@@ -132,19 +115,19 @@ def finish():
 def give():
     win = pyautogui.getWindowsWithTitle('FallenDoll')[0]
     x, y = win.left, win.top
-    pyautogui.moveTo(x + 270 * resRate, y + 268 * resRate )
+    pyautogui.moveTo(x + 300 * resRate, y + 177 * resRate )
     pyautogui.leftClick()
     wait(0.1)
-    pyautogui.moveTo(x + 125 * resRate, y + 330 * resRate )
+    pyautogui.moveTo(x + 100 * resRate, y + 240 * resRate )
     wait(0.1)
     pyautogui.leftClick()
     wait(0.1)
     pyautogui.leftClick()
     wait(0.1)
-    pyautogui.moveTo(x + 270 * resRate, y + 378 * resRate )
+    pyautogui.moveTo(x + 300 * resRate, y + 250 * resRate )
     pyautogui.leftClick()
     wait(0.1)
-    pyautogui.moveTo(x + 125 * resRate, y + 400 * resRate )
+    pyautogui.moveTo(x + 100 * resRate, y + 310 * resRate )
     wait(0.1)
     pyautogui.leftClick()
     wait(0.1)
